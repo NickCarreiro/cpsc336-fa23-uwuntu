@@ -1,5 +1,5 @@
 <?php
-
+include 'connect.php';
 if (isset($_GET['remove'])) {
   echo 'remove was selected';
 }

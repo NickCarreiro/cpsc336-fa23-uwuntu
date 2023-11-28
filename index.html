@@ -1,19 +1,14 @@
 <html>
 	<?php include 'connect.php'/?>
-	<b>
-		Project #2
-		Nicholas Carreiro - Lead Dev
-		Benjamin Newlin - Project Manager
-		Cas Nappi - Database developer
-		Jack Geremia - Web Administrator
-	</b>
-	<form action="/action_page.php" method="get">
-		<label for="$ID">Product ID:</label>
-		<input type="text" id="$ID" name="id"><br><br>
-		<label for="$ItemName">Item Name:</label>
-		<input type="text" id="$ItemName" name="item name"><br><br>
-		<label for="$Quantity">Quantity:</label>
-		<input type="number" id="$Quantity" name="quantity"><br><br>
-		<input type="submit" value="Submit">
+	<b> Pick an Action <br></b>
+	<form action="add.html" method="get">
+		<button type="add"> Add </button>
+	</form>
+	<form action="remove.html" method="get">
+		<button type="remove">Remove</button>
 	</form> 
+ 	<form action="update.html" method="get">
+		<button type="update"> Update </button>
+	</form> 
+
 </html>

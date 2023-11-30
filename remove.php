@@ -3,8 +3,8 @@ include 'connect.php';
 
 // Check if the URL parameter 'ID' is set
 if (isset($_GET['ID'])) {
-    // Sanitize the input
-    $ID = mysqli_real_escape_string($connection, $_GET['ID']);
+    // Retrieve and sanitize the input
+    $ID = mysqli_real_escape_string($connection, trim($_GET['ID'])); // trim() removes any leading/trailing whitespace
 
     // Prepare the SQL statement
     $stmt = mysqli_prepare($connection, "DELETE FROM stock WHERE id = ?");
@@ -12,7 +12,7 @@ if (isset($_GET['ID'])) {
         die('Prepare failed: ' . htmlspecialchars(mysqli_error($connection)));
     }
 
-    // Bind the parameter to the prepared statement
+    // Bind the parameter to the prepared statement as a string
     mysqli_stmt_bind_param($stmt, 's', $ID);
 
     // Execute the statement
@@ -20,7 +20,7 @@ if (isset($_GET['ID'])) {
         if (mysqli_stmt_affected_rows($stmt) > 0) {
             echo "Record removed successfully.";
         } else {
-            echo "No record found with ID " . htmlspecialchars($ID);
+            echo "No record found with ID '" . htmlspecialchars($ID) . "'.";
         }
     } else {
         echo "Error removing record: " . htmlspecialchars(mysqli_stmt_error($stmt));

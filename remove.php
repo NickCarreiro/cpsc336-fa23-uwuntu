@@ -1,8 +1,33 @@
 <?php
 include 'connect.php';
-if (isset($_GET['remove'])) {
-  echo 'remove was selected';
+
+// Check if the URL parameter 'ID' is set
+if (isset($_GET['ID'])) {
+    // Sanitize the input
+    $ID = mysqli_real_escape_string($connection, $_GET['ID']);
+
+    // Prepare the SQL statement
+    $stmt = mysqli_prepare($connection, "DELETE FROM stock WHERE id = ?");
+    if ($stmt === false) {
+        die('Prepare failed: ' . htmlspecialchars(mysqli_error($connection)));
+    }
+
+    // Bind the parameter to the prepared statement
+    mysqli_stmt_bind_param($stmt, 'i', $ID);
+
+    // Execute the statement
+    if (mysqli_stmt_execute($stmt)) {
+        echo "Record removed successfully.";
+    } else {
+        echo "Error removing record: " . htmlspecialchars(mysqli_stmt_error($stmt));
+    }
+
+    // Close the statement
+    mysqli_stmt_close($stmt);
+} else {
+    echo "ID required.";
 }
-$sql = "DELETE FROM <database>  WHERE <col1> = $ID";
-mysqli_query($connection, $sql); //References back to code in connect.php
-<?>
+
+// Close the connection
+mysqli_close($connection);
+?>

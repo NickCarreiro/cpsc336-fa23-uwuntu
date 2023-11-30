@@ -1,4 +1,4 @@
-<?php
+<?php>
 include 'connect.php';
 if (isset($_GET['add'])) {
   echo 'key1 is set';

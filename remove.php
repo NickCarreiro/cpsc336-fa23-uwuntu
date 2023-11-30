@@ -13,11 +13,15 @@ if (isset($_GET['ID'])) {
     }
 
     // Bind the parameter to the prepared statement
-    mysqli_stmt_bind_param($stmt, 'i', $ID);
+    mysqli_stmt_bind_param($stmt, 's', $ID);
 
     // Execute the statement
     if (mysqli_stmt_execute($stmt)) {
-        echo "Record removed successfully.";
+        if (mysqli_stmt_affected_rows($stmt) > 0) {
+            echo "Record removed successfully.";
+        } else {
+            echo "No record found with ID " . htmlspecialchars($ID);
+        }
     } else {
         echo "Error removing record: " . htmlspecialchars(mysqli_stmt_error($stmt));
     }

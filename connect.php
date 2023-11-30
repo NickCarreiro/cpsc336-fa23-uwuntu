@@ -5,7 +5,7 @@
 //$dbname       = “uwuntu”; //Should be CPSC336FinProj
 
 $servername = "127.0.0.1";
-$username = "student";
+$username = "root";
 $password = "student";
 $dbname = "inventory";
 

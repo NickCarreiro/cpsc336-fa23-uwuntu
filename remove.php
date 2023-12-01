@@ -4,8 +4,8 @@ include 'connect.php';
 // Check if the URL parameter 'ID' is set
 if (isset($_GET['ID'])) {
     // Retrieve and sanitize the input
-    $ID = mysqli_real_escape_string($connection, trim($_GET['ID'])); // trim() removes any leading/trailing whitespace
-
+   $ID = $_GET['ID'];
+    
     // Prepare the SQL statement
     $stmt = mysqli_prepare($connection, "DELETE FROM stock WHERE id = ?");
     if ($stmt === false) {

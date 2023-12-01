@@ -15,7 +15,7 @@ if (isset($_GET['ID'], $_GET['ItemName'], $_GET['Quantity'])) {
     }
 
     // Bind the parameters to the prepared statement
-    mysqli_stmt_bind_param($stmt, 'sii', $ItemName, $Quantity, $ID);
+    mysqli_stmt_bind_param($stmt, 'sis', $ItemName, $Quantity, $ID);
 
     // Execute the statement
     if (mysqli_stmt_execute($stmt)) {

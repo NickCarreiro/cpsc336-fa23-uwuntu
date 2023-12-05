@@ -1,9 +1,16 @@
 <html>
-	<b>
-		Project #2
-		Nicholas Carreiro - Lead Dev
-		Benjamin Newlin - Project Manager
-		Cas Nappi - Database developer
-		Jack Geremia - Web Administrator
-	</b>
+	<?php include 'connect.php'/?>
+	<b> Pick an Action <br></b>
+	<form action="add.html" method="get">
+		<button type="add"> Add </button>
+	</form>
+	<form action="remove.html" method="get">
+		<button type="remove">Remove</button>
+	</form> 
+ 	<form action="update.html" method="get">
+		<button type="update"> Update </button>
+	</form> 
+	<form action="show.html" method="get">
+		<button type="show"> Show </button>
+
 </html>

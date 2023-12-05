@@ -1,0 +1,34 @@
+//This is document for Cas so cas actually knows how to do this because it's cas's job and not my job and bro is skipping class
+//
+//
+> sudo apt-get update -y
+> sudo apt-get install apache2 -y
+> sudo apt-get install php -y
+> sudo apt-get install libapache2-mod-php7.0 -y
+> sudo apt-get install php-mysql -y
+> sudo service apache2 restart
+//
+//
+> sudo dpkg --configure -a
+> sudo apt-get install mysql-server -y
+> sudo service mysql status
+//
+// Confirm functionality and that the apache service is actually online
+//
+> mysql -h 127.0.0.1 -u root -p
+> create database inventory;
+> show datatables;
+//
+// Confirm that inventory is now visible in the data tables
+//
+> use inventory;
+> show tables;
+> CREATE TABLE stock(id VARCHAR(32), item_name VARCHAR(32), quantity INT);
+//
+// Now, we're going to test if this is working correctly by adding an item, then removing it
+//
+> INSERT INTO stock VALUES("01", "apple", 1);
+> SELECT * FROM stock;
+> DELETE FROM stock WHERE id="01";
+//
+// Pick up from here

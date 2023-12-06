@@ -2,7 +2,7 @@
 //$servername  = “uwuntu-db.cka8ngtdpp3k.us-east-1.rds.amazonaws.com”; Provided from RDS instance
 //$username     = “username”;
 //$password     = “password”;
-//$dbname       = “inventory”; //Should be CPSC336FinProj
+//$dbname       = “inventory”; //yabadaba doo
 
 $servername = "127.0.0.1";
 $username = "root";

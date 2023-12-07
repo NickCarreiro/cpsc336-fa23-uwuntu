@@ -32,4 +32,8 @@ if (isset($_GET['ID'], $_GET['ItemName'], $_GET['Quantity'])) {
 
 // Close the connection
 mysqli_close($connection);
+
+header( "refresh:5; url=index.html" );
+
+exit();
 ?>

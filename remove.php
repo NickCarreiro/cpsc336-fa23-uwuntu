@@ -34,4 +34,8 @@ if (isset($_GET['ID'])) {
 
 // Close the connection
 mysqli_close($connection);
+
+header( "refresh:5; url=index.html" );
+
+exit();
 ?>

@@ -1,5 +1,5 @@
 <?php
-include 'connect.php';
+include 'connection.php';
 
 // Check if the URL parameter 'ID' is set
 if (isset($_GET['ID'])) {

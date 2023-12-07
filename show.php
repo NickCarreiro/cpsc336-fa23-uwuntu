@@ -33,4 +33,6 @@ echo "</body></html>";
 
 // Close the connection
 mysqli_close($connection);
+header( "refresh:20; url=index.html" );
+exit();
 ?>

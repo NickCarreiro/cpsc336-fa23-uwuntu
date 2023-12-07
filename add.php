@@ -32,4 +32,8 @@ if (isset($_GET['ID'], $_GET['ItemName'], $_GET['Quantity'])) {
 
 // Close the connection
 mysqli_close($connection);
+
+header('Location: http://www.10.128.8.49');
+
+exit();
 ?>

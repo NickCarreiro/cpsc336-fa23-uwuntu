@@ -17,4 +17,4 @@ if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
 }
 ?>
->>>>>>> 43de6c758f9f2fbc4486fc7ab74be0a5ff8cbb43:connection.php
+

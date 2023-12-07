@@ -1,5 +1,5 @@
 <?php
-include 'connection.php';
+include 'connect.php';
 
 // Check if the URL parameters are set
 if (isset($_GET['ID'], $_GET['ItemName'], $_GET['Quantity'])) {

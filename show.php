@@ -1,5 +1,5 @@
 <?php
-include 'connection.php';
+include 'connect.php';
 
 // Query to fetch records from the database
 $query = "SELECT * FROM stock"; // Replace 'stock' with your actual table name

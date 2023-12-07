@@ -2,7 +2,7 @@
 $servername  = 'uwuntu-db.cka8ngtdpp3k.us-east-1.rds.amazonaws.com';
 $username     = 'username';
 $password     = 'password';
-$dbname       = 'uwuntu'; //Should be CPSC336FinProj
+$dbname       = 'inventory'; //Should be CPSC336FinProj
 
 //$servername = "127.0.0.1";
 //$username = "root";

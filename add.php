@@ -7,7 +7,7 @@ if (isset($_GET['ID'], $_GET['ItemName'], $_GET['Quantity'])) {
     $ID = mysqli_real_escape_string($connection, $_GET['ID']);
     $ItemName = mysqli_real_escape_string($connection, $_GET['ItemName']);
     $Quantity = mysqli_real_escape_string($connection, $_GET['Quantity']);
-
+    $Quantity = abs($Quantity);
     // Prepare SQL statement
     $stmt = mysqli_prepare($connection, "INSERT INTO stock (id, item_name, quantity) VALUES (?, ?, ?)");
     if ($stmt === false) {
